@@ -4,27 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tush — Developer</title>
-  <meta name="description" content="Tush — student developer building things on the web." />
 
   <style>
     :root{
-      --bg:#0b0f14;
-      --panel:#0f1624;
-      --border:#1f2a44;
-      --text:#e6edf3;
-      --muted:#9aa4b2;
-      --accent:#7cf3c4;
-      --accent-2:#8ab4ff;
+      /* Catppuccin Mocha */
+      --bg:#0b0f1a;
+      --panel:#11162a;
+      --border:#242b45;
+      --text:#e6e9f2;
+      --muted:#9aa3c7;
+
+      --purple:#cba6f7;
+      --blue:#89b4fa;
+      --pink:#f5c2e7;
+      --glow:rgba(203,166,247,.35);
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
 
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
       background:
-        radial-gradient(1200px 600px at 10% -10%, #122044, transparent 40%),
-        radial-gradient(800px 500px at 90% 10%, #0b3a2b, transparent 40%),
+        radial-gradient(900px 500px at 20% -10%, rgba(137,180,250,.18), transparent 40%),
+        radial-gradient(700px 400px at 90% 10%, rgba(203,166,247,.18), transparent 40%),
         var(--bg);
       color:var(--text);
     }
@@ -33,84 +36,238 @@
 
     /* Layout */
     .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px}
-    .dot{
-      width:10px;height:10px;border-radius:50%;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2))
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
 
-    nav a{opacity:.7;margin-left:18px}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+    }
+
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--purple),var(--blue));
+      box-shadow:0 0 12px var(--glow);
+    }
+
+    nav a{
+      margin-left:18px;
+      opacity:.7;
+    }
     nav a:hover{opacity:1}
 
     /* Hero */
     .hero{
       display:grid;
       grid-template-columns:1.2fr .8fr;
-      gap:28px;
-      margin-top:64px
+      gap:32px;
+      margin-top:72px;
     }
 
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
     }
 
-    h1{font-size:56px;line-height:1.05;margin:0}
-    .subtitle{color:var(--muted);max-width:48ch;margin-top:12px}
+    h1{
+      font-size:56px;
+      line-height:1.05;
+      margin:0;
+    }
+
+    .underline{
+      width:120px;
+      height:4px;
+      margin-top:14px;
+      border-radius:99px;
+      background:linear-gradient(90deg,var(--purple),var(--blue));
+    }
+
+    .subtitle{
+      color:var(--muted);
+      max-width:48ch;
+      margin-top:16px;
+    }
 
     .cta{
-      margin-top:22px;
+      margin-top:24px;
       display:flex;
       gap:14px;
-      flex-wrap:wrap
+      flex-wrap:wrap;
     }
 
     .btn{
+      padding:12px 18px;
+      border-radius:14px;
       border:1px solid var(--border);
-      background:transparent;
-      padding:12px 16px;
-      border-radius:12px
+      background:rgba(255,255,255,.02);
+      backdrop-filter: blur(6px);
+      transition:.25s;
+    }
+
+    .btn:hover{
+      border-color:var(--purple);
+      box-shadow:0 0 20px var(--glow);
     }
 
     .btn.primary{
-      background:linear-gradient(135deg,#0e2f2a,#0b3a2b);
-      border-color:#1f5c4d
+      background:linear-gradient(135deg,var(--purple),var(--blue));
+      color:#0b0f1a;
+      font-weight:600;
     }
 
-    /* Panels */
+    /* Glass panels */
     .panel{
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),
-        var(--panel);
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.04),
+        rgba(255,255,255,.01)
+      );
       border:1px solid var(--border);
-      border-radius:18px;
-      padding:18px
+      border-radius:20px;
+      padding:20px;
+      backdrop-filter: blur(12px);
+      transition:.3s;
     }
 
-    .grid{
+    .panel:hover{
+      border-color:var(--purple);
+      box-shadow:0 0 30px rgba(203,166,247,.15);
+    }
+
+    section{margin-top:64px}
+    h2{font-size:22px;margin:0 0 16px}
+    h3{margin:0 0 8px}
+
+    /* Core stack */
+    .stack{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:16px
+      grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
+      gap:18px;
+      text-align:center;
+      margin-top:12px;
     }
 
-    .tag{
-      display:inline-block;
+    .stack-item{
+      padding:16px;
+      border-radius:16px;
       border:1px solid var(--border);
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:12px;
-      color:#cfd6ff;
-      margin:4px 6px 0 0
+      background:rgba(255,255,255,.02);
+      transition:.25s;
     }
 
-    section{margin-top:48px}
-    h2{font-size:22px;margin:0 0 14px}
-    h3{margin:0 0 6px}
+    .stack-item:hover{
+      border-color:var(--blue);
+      box-shadow:0 0 24px rgba(137,180,250,.2);
+    }
 
-    footer{opacity:.6;margin-top:64px}
+    .stack-item span{
+      font-size:12px;
+      color:var(--muted);
+      display:block;
+      margin-top:6px;
+    }
+
+    footer{
+      opacity:.6;
+      margin-top:72px;
+    }
   </style>
 </head>
 
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="dot"></span>
+      Tush
+    </div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Building things on the web.</h1>
+      <div class="underline"></div>
+
+      <p class="subtitle">
+        Student developer experimenting with browsers, tools, and systems.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#work">See work</a>
+        <a class="btn" href="https://github.com/Flux3tor">GitHub</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Now</h3>
+      <p class="subtitle">
+        Building Flux Browser and refining my portfolio & tooling.
+      </p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <h2>Selected work</h2>
+
+    <div class="panel">
+      <h3>Flux Browser</h3>
+      <p class="subtitle">
+        Experimental lightweight browser wrapper exploring performance and privacy.
+      </p>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>Explain My Code</h3>
+      <p class="subtitle">
+        Tool that explains unfamiliar code with clean breakdowns and suggestions.
+      </p>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <h2>Core Stack</h2>
+    <div class="panel">
+      <div class="stack">
+        <div class="stack-item">🟣<span>HTML</span></div>
+        <div class="stack-item">🔵<span>CSS</span></div>
+        <div class="stack-item">🟡<span>JavaScript</span></div>
+        <div class="stack-item">⚙️<span>Git</span></div>
+        <div class="stack-item">🌐<span>Web APIs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Let’s connect</h2>
+    <div class="panel">
+      <p class="subtitle">Email: tusharsinha199@gmail.com</p>
+      <p class="subtitle">
+        GitHub: <a href="https://github.com/Flux3tor">@Flux3tor</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>© 2026 Tush</footer>
+
+</div>
+</body>
+</html>
 <body>
   <div class="wrap">
     <header>
