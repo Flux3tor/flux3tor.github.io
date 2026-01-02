@@ -3,176 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tush — Developer</title>
+  <title>Tush — student developer</title>
 
   <!-- Devicon icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
     :root{
-      /* Catppuccin Mocha */
       --bg:#0b0f1a;
       --panel:#11162a;
       --border:#242b45;
       --text:#e6e9f2;
       --muted:#9aa3c7;
-
-      --purple:#cba6f7;
-      --blue:#89b4fa;
-      --glow:rgba(203,166,247,.35);
+      --accent:#cba6f7;
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
 
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
-      background:
-        radial-gradient(900px 500px at 20% -10%, rgba(137,180,250,.18), transparent 40%),
-        radial-gradient(700px 400px at 90% 10%, rgba(203,166,247,.18), transparent 40%),
-        var(--bg);
-      color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{color:var(--accent);text-decoration:none}
 
-    /* Layout */
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .wrap{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      animation: fadeUp .8s ease both;
+    }
 
     header{
       display:flex;
-      align-items:center;
       justify-content:space-between;
-    }
-
-    .brand{
-      display:flex;
       align-items:center;
-      gap:10px;
-      font-weight:600;
-    }
-
-    .dot{
-      width:8px;height:8px;border-radius:50%;
-      background:linear-gradient(135deg,var(--purple),var(--blue));
-      box-shadow:0 0 10px var(--glow);
+      margin-bottom:64px;
     }
 
     nav a{
       margin-left:18px;
-      opacity:.7;
-      font-size:14px;
-    }
-    nav a:hover{opacity:1}
-
-    /* Hero */
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:32px;
-      margin-top:72px;
+      color:var(--muted);
+      position:relative;
     }
 
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0; bottom:-4px;
+      width:0;
+      height:2px;
+      background:var(--accent);
+      transition:.25s;
     }
+
+    nav a:hover::after{width:100%}
 
     h1{
-      font-size:56px;
-      line-height:1.05;
+      font-size:48px;
+      line-height:1.1;
       margin:0;
+      animation: fadeUp .9s ease both;
     }
 
-    .underline{
-      width:120px;
-      height:4px;
-      margin-top:14px;
-      border-radius:99px;
-      background:linear-gradient(90deg,var(--purple),var(--blue));
+    h2{
+      margin:64px 0 16px;
+      font-size:22px;
+    }
+
+    h3{
+      margin:0 0 6px;
+      font-size:16px;
     }
 
     .subtitle{
       color:var(--muted);
-      max-width:48ch;
-      margin-top:16px;
-      font-size:15px;
+      max-width:60ch;
+      animation: fadeUp 1s ease both;
     }
 
-    .cta{
-      margin-top:24px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:12px 18px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
-      backdrop-filter: blur(6px);
-      transition:.25s;
-      font-size:14px;
-    }
-
-    .btn:hover{
-      border-color:var(--purple);
-      box-shadow:0 0 20px var(--glow);
-    }
-
-    .btn.primary{
-      background:linear-gradient(135deg,var(--purple),var(--blue));
-      color:#0b0f1a;
-      font-weight:600;
-    }
-
-    /* Panels */
     .panel{
-      background:linear-gradient(
-        180deg,
-        rgba(255,255,255,.04),
-        rgba(255,255,255,.01)
-      );
+      background: var(--panel);
       border:1px solid var(--border);
-      border-radius:20px;
-      padding:20px;
-      backdrop-filter: blur(12px);
+      border-radius:14px;
+      padding:18px;
+      margin-top:14px;
+      transition:.25s ease;
+      animation: fadeUp 1.1s ease both;
     }
 
-    section{margin-top:64px}
-    h2{font-size:22px;margin:0 0 16px}
-    h3{margin:0 0 6px;font-size:16px}
-
-    /* Work */
-    .work-list{
-      display:grid;
-      gap:16px;
+    .panel:hover{
+      transform: translateY(-4px);
+      border-color: var(--accent);
     }
 
-    /* Stack */
-    .stack-grid{
+    .project{
+      margin-top:20px;
+    }
+
+    .stack{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
-      gap:20px;
+      gap:18px;
+      margin-top:14px;
     }
 
     .stack-item{
-      padding:18px 10px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
       text-align:center;
-      transition:.25s;
+      padding:14px 8px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#0e1324;
+      transition:.25s ease;
+      animation: fadeUp 1.2s ease both;
     }
 
     .stack-item:hover{
-      border-color:var(--purple);
-      box-shadow:0 0 24px rgba(203,166,247,.25);
+      transform: translateY(-4px);
+      border-color: var(--accent);
     }
 
     .stack-item i{
-      font-size:34px;
-      margin-bottom:8px;
+      font-size:28px;
+      margin-bottom:6px;
     }
 
     .stack-item span{
@@ -181,9 +137,30 @@
     }
 
     footer{
-      opacity:.6;
-      margin-top:72px;
+      margin-top:80px;
+      color:var(--muted);
       font-size:13px;
+      animation: fadeUp 1.3s ease both;
+    }
+
+    /* Animations */
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(14px);
+      }
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      *{
+        animation:none !important;
+        transition:none !important;
+      }
     }
   </style>
 </head>
@@ -193,66 +170,55 @@
 
   <!-- HEADER -->
   <header>
-    <div class="brand">
-      <span class="dot"></span>
-      Tush
-    </div>
+    <strong>Tush</strong>
     <nav>
       <a href="#work">Work</a>
       <a href="#stack">Stack</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>Building things on the web.</h1>
-      <div class="underline"></div>
-
-      <p class="subtitle">
-        Student developer experimenting with browsers, tools, and systems.
-      </p>
-
-      <div class="cta">
-        <a class="btn primary" href="#work">See work</a>
-        <a class="btn" href="https://github.com/Flux3tor">GitHub</a>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h3>Now</h3>
-      <p class="subtitle">
-        Building Flux Browser and refining my portfolio & tooling.
-      </p>
-    </div>
+  <section>
+    <h1>Tush — student developer</h1>
+    <p class="subtitle">
+      I experiment with the web, tools, and systems. I like learning by building
+      things and understanding how they work under the hood.
+    </p>
   </section>
 
   <!-- WORK -->
   <section id="work">
     <h2>Selected work</h2>
-    <div class="work-list">
-      <div class="panel">
-        <h3>Flux Browser</h3>
-        <p class="subtitle">
-          Experimental lightweight browser wrapper exploring performance and privacy.
-        </p>
-      </div>
 
-      <div class="panel">
-        <h3>Explain My Code</h3>
-        <p class="subtitle">
-          Tool that explains unfamiliar code with clean breakdowns and suggestions.
-        </p>
-      </div>
+    <div class="panel project">
+      <h3>Flux Browser</h3>
+      <p class="subtitle">
+        An experimental browser / wrapper project where I explore UI decisions,
+        performance behavior, and how browsers interact with the system.
+      </p>
+    </div>
+
+    <div class="panel project">
+      <h3>Explain My Code</h3>
+      <p class="subtitle">
+        A web tool that helps understand unfamiliar code by breaking it down and
+        explaining what it does, line by line.
+      </p>
     </div>
   </section>
 
   <!-- STACK -->
   <section id="stack">
-    <h2>Core Stack</h2>
+    <h2>Core stack</h2>
+
     <div class="panel">
-      <div class="stack-grid">
+      <p class="subtitle">
+        Technologies I’m comfortable using and building with.
+      </p>
+
+      <div class="stack">
         <div class="stack-item">
           <i class="devicon-html5-plain colored"></i>
           <span>HTML</span>
@@ -273,26 +239,43 @@
           <i class="devicon-github-original"></i>
           <span>GitHub</span>
         </div>
-        <div class="stack-item">
-          <i class="devicon-chrome-plain"></i>
-          <span>Web APIs</span>
-        </div>
       </div>
+    </div>
+
+    <div class="panel">
+      <p class="subtitle">
+        I also experiment with Python, Arduino, electronics, and automation as part
+        of personal projects and learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="panel">
+      <p class="subtitle">
+        I’m a student who enjoys exploring how things work — whether that’s code,
+        hardware, or systems. I focus more on learning and experimentation than
+        polish, and I’m constantly improving by building.
+      </p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Let’s connect</h2>
+    <h2>Contact</h2>
     <div class="panel">
       <p class="subtitle">Email: tusharsinha199@gmail.com</p>
       <p class="subtitle">
-        GitHub: <a href="https://github.com/Flux3tor">@Flux3tor</a>
+        GitHub: <a href="https://github.com/Flux3tor">github.com/Flux3tor</a>
       </p>
     </div>
   </section>
 
-  <footer>© 2026 Tush</footer>
+  <footer>
+    © 2026 Tush
+  </footer>
 
 </div>
 </body>
