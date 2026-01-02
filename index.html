@@ -3,67 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tush | Portfolio</title>
+  <title>Tush — Developer</title>
+  <meta name="description" content="Tush — student developer building things on the web." />
+
   <style>
-    :root{--bg:#0b0f14;--card:#121826;--text:#e6edf3;--muted:#9aa4b2;--accent:#7cf3c4}
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1624;
+      --border:#1f2a44;
+      --text:#e6edf3;
+      --muted:#9aa4b2;
+      --accent:#7cf3c4;
+      --accent-2:#8ab4ff;
+    }
+
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:linear-gradient(180deg,#0b0f14,#0e1626); color:var(--text)}
-    a{color:var(--accent);text-decoration:none}
-    header{max-width:980px;margin:auto;padding:64px 20px}
-    h1{font-size:42px;line-height:1.1;margin:0 0 10px}
-    p{color:var(--muted)}
-    .cta a{margin-right:14px}
-    main{max-width:980px;margin:auto;padding:0 20px 80px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .pill{display:inline-block;border:1px solid #263049;border-radius:999px;padding:6px 10px;font-size:12px;margin:4px 6px 0 0;color:#cfd6ff}
-    footer{max-width:980px;margin:auto;padding:20px;color:var(--muted)}
+    html,body{margin:0}
+
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #122044, transparent 40%),
+        radial-gradient(800px 500px at 90% 10%, #0b3a2b, transparent 40%),
+        var(--bg);
+      color:var(--text);
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2))
+    }
+
+    nav a{opacity:.7;margin-left:18px}
+    nav a:hover{opacity:1}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      margin-top:64px
+    }
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    h1{font-size:56px;line-height:1.05;margin:0}
+    .subtitle{color:var(--muted);max-width:48ch;margin-top:12px}
+
+    .cta{
+      margin-top:22px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap
+    }
+
+    .btn{
+      border:1px solid var(--border);
+      background:transparent;
+      padding:12px 16px;
+      border-radius:12px
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,#0e2f2a,#0b3a2b);
+      border-color:#1f5c4d
+    }
+
+    /* Panels */
+    .panel{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),
+        var(--panel);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px
+    }
+
+    .tag{
+      display:inline-block;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      color:#cfd6ff;
+      margin:4px 6px 0 0
+    }
+
+    section{margin-top:48px}
+    h2{font-size:22px;margin:0 0 14px}
+    h3{margin:0 0 6px}
+
+    footer{opacity:.6;margin-top:64px}
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Hi, I’m Tush 👋</h1>
-    <p>Student developer building experiments at FluxLabs — browsers, web tools, and electronics.</p>
-    <div class="cta">
-      <a href="#projects">View projects</a>
-      <a href="https://github.com/Flux3tor">GitHub</a>
-    </div>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <strong>Tush</strong>
+      </div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <main>
-    <section id="projects">
-      <h2>Projects</h2>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Building things on the web.</h1>
+        <p class="subtitle">
+          Student developer experimenting with browsers, tools, and electronics.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See work</a>
+          <a class="btn" href="https://github.com/Flux3tor">GitHub</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Now</h3>
+        <p class="subtitle">
+          Building a lightweight browser experiment and refining my portfolio.
+        </p>
+        <div class="tag">Web</div>
+        <div class="tag">Browser</div>
+        <div class="tag">Experimental</div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <h2>Selected work</h2>
       <div class="grid">
-        <div class="card">
+        <div class="panel">
           <h3>Flux Browser</h3>
-          <p>Experimental lightweight browser wrapper to explore performance and privacy trade-offs.</p>
-          <span class="pill">Browser</span><span class="pill">Web</span><span class="pill">Experimental</span>
+          <p class="subtitle">
+            Experimental lightweight browser wrapper exploring performance and privacy trade-offs.
+          </p>
+          <div class="tag">Browser</div>
+          <div class="tag">Experimental</div>
         </div>
-        <div class="card">
+
+        <div class="panel">
           <h3>Explain My Code</h3>
-          <p>A web tool that explains unfamiliar code with clear breakdowns and suggestions.</p>
-          <span class="pill">HTML</span><span class="pill">JS</span><span class="pill">UX</span>
+          <p class="subtitle">
+            A tool that explains unfamiliar code with clear breakdowns and suggestions.
+          </p>
+          <div class="tag">JavaScript</div>
+          <div class="tag">UX</div>
         </div>
       </div>
     </section>
 
-    <section style="margin-top:32px">
-      <h2>Skills</h2>
-      <div class="card">
-        <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
-        <span class="pill">Git/GitHub</span><span class="pill">Arduino</span><span class="pill">Electronics</span>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="panel">
+        <p class="subtitle">
+          I like minimal interfaces, fast pages, and learning by building.
+          Currently a student, constantly experimenting.
+        </p>
       </div>
     </section>
 
-    <section style="margin-top:32px">
+    <!-- CONTACT -->
+    <section id="contact">
       <h2>Contact</h2>
-      <div class="card">
-        <p>Email: tusharsinha199@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/Flux3tor">@Flux3tor</a></p>
+      <div class="panel">
+        <p class="subtitle">Email: tusharsinha199@gmail.com</p>
+        <p class="subtitle">
+          GitHub:
+          <a href="https://github.com/Flux3tor">@Flux3tor</a>
+        </p>
       </div>
     </section>
-  </main>
 
-  <footer>© 2026 Tush • Built with ❤️</footer>
+    <footer>© 2026 Tush</footer>
+  </div>
 </body>
 </html>
