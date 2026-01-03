@@ -1,1 +1,35 @@
+.hero {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
 
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  margin: 0 0.5rem;
+}
+
+.primary {
+  background: var(--accent);
+  color: #000;
+}
+
+.ghost {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
