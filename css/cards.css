@@ -1,1 +1,6 @@
-
+.project-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+}
