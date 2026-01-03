@@ -1,1 +1,23 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(10px);
+}
 
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--text);
+}
