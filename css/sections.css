@@ -105,3 +105,8 @@
   margin-top: 1.5rem;
   color: var(--muted);
 }
+
+.glow-text {
+  color: var(--accent);
+  text-shadow: var(--glow);
+}
