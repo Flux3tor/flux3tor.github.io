@@ -158,3 +158,24 @@
   transform: translateY(-4px);
   box-shadow: var(--glow);
 }
+
+.focus-list {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 500px;
+}
+
+.focus-list li {
+  list-style: none;
+  color: var(--muted);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.focus-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
