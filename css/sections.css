@@ -231,3 +231,19 @@
   color: var(--muted);
   opacity: 0.8;
 }
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+  }
+  50% {
+    text-shadow: 0 0 28px rgba(139, 92, 246, 0.55);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+  }
+}
+
+.glow-text {
+  animation: glowPulse 2.5s ease-in-out 1;
+}
