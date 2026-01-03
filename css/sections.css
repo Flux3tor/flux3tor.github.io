@@ -73,3 +73,35 @@
 .skill:hover {
   transform: translateY(-3px);
 }
+
+.hero {
+  padding: 7rem 1.5rem 6rem;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 3.8rem);
+  margin-top: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.hero p {
+  max-width: 520px;
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
