@@ -1,9 +1,12 @@
 :root {
-  --bg: #0b0f1a;
-  --card: #12182b;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #8b5cf6;
+  --bg: #0a0d16;
+  --card: #11162a;
 
-  --radius: 14px;
+  --text: #e6e9f2;
+  --muted: #9aa3c7;
+
+  --accent: #8b5cf6;      /* main purple */
+  --accent-soft: #a78bfa; /* hover glow */
+
+  --glow: 0 0 25px rgba(139, 92, 246, 0.35);
 }
