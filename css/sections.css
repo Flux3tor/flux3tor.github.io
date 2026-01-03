@@ -209,3 +209,25 @@
   margin-top: 0.4rem;
   color: var(--muted);
 }
+
+.contact-intro {
+  max-width: 480px;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.6rem;
+}
+
+.contact-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  opacity: 0.8;
+}
