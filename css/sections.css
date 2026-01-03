@@ -191,3 +191,21 @@
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+.secondary-focus {
+  margin-top: 1.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid rgba(139, 92, 246, 0.4);
+}
+
+.secondary-focus span {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.secondary-focus p {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
