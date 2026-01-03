@@ -179,3 +179,9 @@
   left: 0;
   color: var(--accent);
 }
+
+.section-intro {
+  max-width: 520px;
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
