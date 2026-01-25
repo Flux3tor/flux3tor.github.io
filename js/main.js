@@ -1,5 +1,3 @@
-// animations.js
-
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -8,9 +6,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.15,
-  }
+  { threshold: 0.15 }
 );
 
 document.querySelectorAll(".reveal").forEach(el => {
