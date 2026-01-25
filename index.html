@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tush | Developer & Builder</title>
+  <title>Tush — Full Stack Developer</title>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/effects.css">
 </head>
 <body>
+
+<div id="scroll-bar"></div>
 
 <header class="navbar">
   <div class="nav-inner">
@@ -30,205 +32,72 @@
 
 <main>
 
-<!-- HERO -->
 <section class="hero reveal">
   <span class="kicker">SYSTEMS • WEB • TOOLS</span>
-
-  <h1>
-    Hi, I'm <span class="glow">Tush</span>
-  </h1>
-
-  <h2>Developer & Builder</h2>
-
+  <h1>Hi, I'm <span class="glow">Tush</span></h1>
+  <h2>Full Stack Developer</h2>
   <p>
-    I build web tools and experiments that explore performance,
+    I build tools and experiments that explore performance,
     system behavior, and user interaction.
-    I care about clean structure, intentional design,
-    and learning by shipping real projects.
+    I learn by shipping and understanding how things work under the hood.
   </p>
-
   <div class="hero-actions">
     <a href="#projects" class="btn primary">View Work</a>
     <a href="https://github.com/Flux3tor" class="btn ghost">GitHub</a>
   </div>
 </section>
 
-<!-- NOW -->
 <section id="now" class="section reveal">
   <h2>What I'm focused on now</h2>
-
   <div class="now-grid">
     <div class="now-card">
       <h3>FluxPad</h3>
-      <p>Designing a hardware-first macropad that connects physical input with software workflows.</p>
+      <p>Designing a hardware-first macropad that bridges physical input and digital workflows.</p>
     </div>
-
     <div class="now-card">
       <h3>Systems Learning</h3>
-      <p>Studying how browsers, operating systems, and networks behave under real-world conditions.</p>
+      <p>Studying browser, OS, and network behavior under real-world conditions.</p>
     </div>
-
     <div class="now-card">
       <h3>Web Experiments</h3>
-      <p>Building small tools and prototypes to test UI, performance, and interaction patterns.</p>
+      <p>Building small tools to test UI, performance, and interaction patterns.</p>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section reveal">
   <h2>Projects</h2>
-
-  <!-- Flux Browser -->
-  <div class="project-card">
-    <h3>Flux Browser</h3>
-
-    <div class="tags">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-    </div>
-
-    <p>
-      An experimental browser wrapper focused on UI decisions,
-      performance behavior, and system interaction.
-    </p>
-
-    <p class="meta">
-      Built to explore how browsers behave and how small interface
-      choices affect usability and performance.
-    </p>
-  </div>
-
-  <!-- Explain My Code -->
-  <div class="project-card">
-    <h3>Explain My Code</h3>
-
-    <div class="tags">
-      <span>JavaScript</span>
-      <span>UX</span>
-      <span>Web</span>
-    </div>
-
-    <p>
-      A web tool that breaks down unfamiliar code and explains
-      what it does in a clear, readable way.
-    </p>
-
-    <p class="meta">
-      Built to reduce friction when reading other people's code
-      by focusing on clarity, structure, and learning through explanation.
-    </p>
-  </div>
-
-  <!-- FluxPad -->
-  <div class="project-card">
-    <h3>FluxPad</h3>
-
-    <div class="tags">
-      <span>Arduino</span>
-      <span>Hardware</span>
-      <span>Web</span>
-    </div>
-
-    <p>
-      A custom macropad that bridges physical hardware inputs
-      with software actions for productivity and creative workflows.
-    </p>
-
-    <p class="meta">
-      Built to explore how physical interfaces can improve speed,
-      ergonomics, and interaction with digital tools.
-    </p>
-  </div>
-
-  <!-- AlmostWorks -->
-  <div class="project-card">
-    <h3>AlmostWorks</h3>
-
-    <div class="tags">
-      <span>JavaScript</span>
-      <span>Web</span>
-      <span>Experiments</span>
-    </div>
-
-    <p>
-      A collection of small web experiments and prototypes
-      focused on learning by building and shipping quickly.
-    </p>
-
-    <p class="meta">
-      Built as a space to test ideas, break things,
-      and iterate without overengineering.
-    </p>
-  </div>
-
-  <!-- gl1tchbound -->
-  <div class="project-card">
-    <h3>Gl1tchbound</h3>
-
-    <div class="tags">
-      <span>Java</span>
-      <span>Minecraft</span>
-      <span>Modding</span>
-    </div>
-
-    <p>
-      A custom Minecraft mod focused on adding new mechanics,
-      systems, and gameplay experiments.
-    </p>
-
-    <p class="meta">
-      Built to explore game systems design and how players
-      interact with rules, progression, and balance.
-    </p>
-  </div>
+  <div id="project-list"></div>
 </section>
 
-<!-- STACK -->
 <section id="stack" class="section reveal">
   <h2>Stack</h2>
   <p class="section-intro">
-    Tools I regularly use to design, build, and ship projects,
-    focusing on fundamentals before frameworks.
+    Tools I regularly use to design, build, and ship projects — fundamentals first.
   </p>
-
   <div class="stack-grid">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Git</span>
-    <span>GitHub</span>
-    <span>Python</span>
-    <span>Arduino</span>
+    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>Git</span><span>GitHub</span><span>Python</span><span>Arduino</span>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section reveal">
   <h2>About</h2>
   <p>
-    I enjoy understanding how things work — from web apps
-    to hardware and systems.
-    I focus on building real projects, studying their behavior,
-    and improving through iteration.
-    Long-term, I'm interested in deeper systems,
-    performance, and engineering-driven problem solving.
+    I enjoy understanding how things work — from web apps to hardware and systems.
+    I focus on building real projects, studying their behavior, and improving through iteration.
   </p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section reveal">
   <h2>Get in touch</h2>
-
   <p class="contact-intro">
-    If you want to talk about projects, ideas, or just cool tech,
-    feel free to reach out.
+    If you want to talk about projects, ideas, or just cool tech, reach out.
   </p>
-
   <ul class="contact-list">
-    <li>Email — <a href="mailto:tusharsinha199@gmail.com">tusharsinha199@gmail.com</a></li>
+    <li>Email — <a href="#" id="copy-email">tusharsinha199@gmail.com</a></li>
     <li>GitHub — <a href="https://github.com/Flux3tor">github.com/Flux3tor</a></li>
+    <li>Instagram — <a href="https://instagram.com/imnot.tush">@imnot.tush</a></li>
   </ul>
 </section>
 
@@ -238,6 +107,13 @@
   Built with intent • Hosted on GitHub Pages • Domain by is-a.dev
 </footer>
 
-<script src="js/main.js"></script>
+<!-- SCRIPTS -->
+<script src="data/projects.js"></script>
+<script src="js/core.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/perf.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/easter.js"></script>
 </body>
 </html>
