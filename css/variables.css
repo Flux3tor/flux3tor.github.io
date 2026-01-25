@@ -1,12 +1,15 @@
 :root {
   --bg: #0a0d16;
-  --card: #11162a;
+  --surface: #0f1426;
+  --card: #12182b;
 
   --text: #e6e9f2;
   --muted: #9aa3c7;
 
-  --accent: #8b5cf6;      /* main purple */
-  --accent-soft: #a78bfa; /* hover glow */
+  --accent: #8b5cf6;
+  --accent-soft: #a78bfa;
 
-  --glow: 0 0 25px rgba(139, 92, 246, 0.35);
+  --radius: 14px;
+  --glow: 0 0 28px rgba(139, 92, 246, 0.25);
+  --border: rgba(139, 92, 246, 0.15);
 }
