@@ -3,211 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tush | Developer</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <title>Tush — Developer & Builder</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <header class="navbar">
-    <div class="nav-container">
-      <span class="logo">Tush</span>
-      <nav>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="navbar">
+  <div class="nav-inner">
+    <span class="logo">Tush</span>
+    <nav>
+      <a href="#now">Now</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
- <section class="hero reveal">
-  <span class="hero-kicker">SYSTEMS • WEB • TOOLS</span>
+<main>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <span class="kicker">SYSTEMS • WEB • TOOLS</span>
 
   <h1>
-    Hi, I'm <span class="glow-text">Tush</span>
+    Hi, I'm <span class="glow">Tush</span>
   </h1>
 
   <h2>Developer & Builder</h2>
 
-<p>
-  I build web tools and experiments that explore performance,
-  system behavior, and user interaction.
-  I care about clean structure, intentional design,
-  and learning by shipping real projects.
-</p>
+  <p>
+    I build web tools and experiments that explore performance,
+    system behavior, and user interaction.
+    I care about clean structure, intentional design,
+    and learning by shipping real projects.
+  </p>
 
-
-  <div class="hero-buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
+  <div class="hero-actions">
+    <a href="#projects" class="btn primary">View Work</a>
     <a href="https://github.com/Flux3tor" class="btn ghost">GitHub</a>
   </div>
-
-   <ul class="focus-list">
-  <li>Designing clean, usable interfaces</li>
-  <li>Understanding how systems behave under the hood</li>
-  <li>Building tools instead of demos</li>
-  <li>Learning by shipping and iterating</li>
-</ul>
-
 </section>
 
+<!-- NOW -->
+<section id="now" class="section reveal">
+  <h2>What I'm focused on now</h2>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section reveal">
-    <h2>What I use</h2>
+  <div class="now-grid">
+    <div class="now-card">
+      <h3>FluxPad</h3>
+      <p>Designing a hardware-first macropad that connects physical input with software workflows.</p>
+    </div>
 
-    <p class="section-intro">
-  Tools I regularly use to design, build, and ship projects —
-  focusing on fundamentals before frameworks.
-</p>
+    <div class="now-card">
+      <h3>Systems Learning</h3>
+      <p>Studying how browsers, operating systems, and networks behave under real-world conditions.</p>
+    </div>
 
+    <div class="now-card">
+      <h3>Web Experiments</h3>
+      <p>Building small tools and prototypes to test UI, performance, and interaction patterns.</p>
+    </div>
+  </div>
+</section>
 
-   <div class="skill-grid">
-  <div class="skill">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
+
+  <!-- Flux Browser -->
+  <div class="project-card">
+    <h3>Flux Browser</h3>
+
+    <div class="tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+
+    <p>
+      An experimental browser wrapper focused on UI decisions,
+      performance behavior, and system interaction.
+    </p>
+
+    <p class="meta">
+      Built to explore how browsers behave and how small interface
+      choices affect usability and performance.
+    </p>
+  </div>
+
+  <!-- Explain My Code -->
+  <div class="project-card">
+    <h3>Explain My Code</h3>
+
+    <div class="tags">
+      <span>JavaScript</span>
+      <span>UX</span>
+      <span>Web</span>
+    </div>
+
+    <p>
+      A web tool that breaks down unfamiliar code and explains
+      what it does in a clear, readable way.
+    </p>
+
+    <p class="meta">
+      Built to reduce friction when reading other people's code
+      by focusing on clarity, structure, and learning through explanation.
+    </p>
+  </div>
+
+  <!-- FluxPad -->
+  <div class="project-card">
+    <h3>FluxPad</h3>
+
+    <div class="tags">
+      <span>Arduino</span>
+      <span>Hardware</span>
+      <span>Web</span>
+    </div>
+
+    <p>
+      A custom macropad that bridges physical hardware inputs
+      with software actions for productivity and creative workflows.
+    </p>
+
+    <p class="meta">
+      Built to explore how physical interfaces can improve speed,
+      ergonomics, and interaction with digital tools.
+    </p>
+  </div>
+
+  <!-- AlmostWorks -->
+  <div class="project-card">
+    <h3>AlmostWorks</h3>
+
+    <div class="tags">
+      <span>JavaScript</span>
+      <span>Web</span>
+      <span>Experiments</span>
+    </div>
+
+    <p>
+      A collection of small web experiments and prototypes
+      focused on learning by building and shipping quickly.
+    </p>
+
+    <p class="meta">
+      Built as a space to test ideas, break things,
+      and iterate without overengineering.
+    </p>
+  </div>
+
+  <!-- gl1tchbound -->
+  <div class="project-card">
+    <h3>gl1tchbound</h3>
+
+    <div class="tags">
+      <span>Java</span>
+      <span>Minecraft</span>
+      <span>Modding</span>
+    </div>
+
+    <p>
+      A custom Minecraft mod focused on adding new mechanics,
+      systems, and gameplay experiments.
+    </p>
+
+    <p class="meta">
+      Built to explore game systems design and how players
+      interact with rules, progression, and balance.
+    </p>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="section reveal">
+  <h2>Stack</h2>
+  <p class="section-intro">
+    Tools I regularly use to design, build, and ship projects,
+    focusing on fundamentals before frameworks.
+  </p>
+
+  <div class="stack-grid">
     <span>HTML</span>
-  </div>
-
-  <div class="skill">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
     <span>CSS</span>
-  </div>
-
-  <div class="skill">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
     <span>JavaScript</span>
-  </div>
-
-  <div class="skill">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
     <span>Git</span>
-  </div>
-
-  <div class="skill">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
     <span>GitHub</span>
+    <span>Python</span>
+    <span>Arduino</span>
   </div>
-</div>
+</section>
 
-
-<div class="secondary-focus">
-  <span>Exploration</span>
-  <p>Python · Arduino · Electronics · Automation</p>
-</div>
-
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section reveal">
-    <h2>Projects</h2>
-
-<div class="project-card">
-  <h3>Flux Browser</h3>
-
-  <div class="tech-tags">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-  </div>
-
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About</h2>
   <p>
-    An experimental browser wrapper focused on UI decisions,
-    performance behavior, and system interaction.
+    I enjoy understanding how things work — from web apps
+    to hardware and systems.
+    I focus on building real projects, studying their behavior,
+    and improving through iteration.
+    Long-term, I'm interested in deeper systems,
+    performance, and engineering-driven problem solving.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Get in touch</h2>
+
+  <p class="contact-intro">
+    If you want to talk about projects, ideas, or just cool tech,
+    feel free to reach out.
   </p>
 
-  <p class="project-meta">
-    Built to explore how browsers behave and how small UI choices
-    affect usability and performance.
-  </p>
-</div>
+  <ul class="contact-list">
+    <li>Email — <a href="mailto:tusharsinha199@gmail.com">tusharsinha199@gmail.com</a></li>
+    <li>GitHub — <a href="https://github.com/Flux3tor">github.com/Flux3tor</a></li>
+  </ul>
+</section>
 
-
-<div class="project-card">
-  <h3>Explain My Code</h3>
-
-  <div class="tech-tags">
-    <span>JavaScript</span>
-    <span>Web</span>
-    <span>UX</span>
-  </div>
-
-  <p>
-    A web tool that breaks down unfamiliar code and explains
-    what it does in a clear, readable way.
-  </p>
-
-  <p class="project-meta">
-    Built to reduce friction when reading other people’s code,
-    focusing on clarity, structure, and learning through explanation.
-  </p>
-</div>
-
-    <div class="project-card">
-  <h3>Flowday</h3>
-
-  <div class="tech-tags">
-    <span>JavaScript</span>
-    <span>Web</span>
-    <span>UX</span>
-  </div>
-
-  <p>
-    A focused daily planner designed to help students structure
-    their day and stay in flow without distractions.
-  </p>
-
-  <p class="project-meta">
-    Built to explore how simple structure and time-boxing
-    can improve focus, planning, and follow-through.
-  </p>
-</div>
-
-
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section reveal">
-    <h2>About me</h2>
-<p>
-  I enjoy understanding how things work — from web apps
-  to hardware and systems.
-  I focus on building real projects, studying their behavior,
-  and improving through iteration.
-  Long-term, I’m interested in deeper systems, performance,
-  and engineering-driven problem solving.
-</p>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section reveal">
-    <h2>Get in Touch</h2>
-    <p class="contact-intro">
-  If you want to talk about projects, ideas, or just cool tech,
-  feel free to reach out.
-</p>
-
-<ul class="contact-list">
-  <li>Email: <a href="mailto:tusharsinha199@gmail.com">tusharsinha199@gmail.com</a></li>
-  <li>GitHub: <a href="https://github.com/Flux3tor">@Flux3tor</a></li>
-</ul>
-  </section>
+</main>
 
 <footer class="footer">
-  <p>
-    Built with intent • Hosted on GitHub Pages • Domain by is-a.dev
-  </p>
+  Built with intent • Hosted on GitHub Pages • Domain by is-a.dev
 </footer>
 
-  <script src="js/animations.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
